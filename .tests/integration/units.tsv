@@ -1,0 +1,2 @@
+sample	type	run	lane	fq1	fq2
+SeraSeq	R	1	1	input/R1.fq.gz	input/R2.fq.gz
