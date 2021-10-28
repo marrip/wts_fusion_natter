@@ -1,0 +1,7 @@
+include: "rules/common.smk"
+include: "rules/sortmerna.smk"
+include: "rules/combine_fq.smk"
+
+rule all:
+    input:
+        compile_output_list,
