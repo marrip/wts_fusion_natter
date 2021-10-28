@@ -1,0 +1,11 @@
+samples: "samples.tsv"
+units: "units.tsv"
+
+sortmerna:
+  fasta:
+    - ""
+  index: ""
+
+tools:
+  common: "docker://marrip/common:1.1.1"
+  sortmerna: "docker://marrip/sortmerna:4.3.4"
