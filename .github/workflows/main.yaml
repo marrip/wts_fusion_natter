@@ -3,7 +3,7 @@ name: Lint and Test
 on:
   push:
     branches:
-      - add-action
+      - develop
 
 jobs:
   lint:
@@ -30,7 +30,7 @@ jobs:
         uses: github/super-linter@v3
         env:
           VALIDATE_ALL_CODEBASE: false
-          DEFAULT_BRANCH: add-action
+          DEFAULT_BRANCH: develop
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_SNAKEMAKE_SNAKEFMT: true
           OUTPUT_FOLDER: .github/linters/report
