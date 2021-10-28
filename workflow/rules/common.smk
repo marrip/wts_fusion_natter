@@ -11,13 +11,13 @@ min_version("6.0.0")
 configfile: "config.yaml"
 
 
-#validate(config, schema="../schemas/config.schema.yaml")
+# validate(config, schema="../schemas/config.schema.yaml")
 
 
 ### Read and validate samples file
 
 samples = pd.read_table(config["samples"], dtype=str).set_index("sample", drop=False)
-#validate(samples, schema="../schemas/samples.schema.yaml")
+# validate(samples, schema="../schemas/samples.schema.yaml")
 
 ### Read and validate units file
 
@@ -26,7 +26,7 @@ units = (
     .sort_values(["sample", "type"], ascending=False)
     .set_index(["sample", "type", "run", "lane"], drop=False)
 )
-#validate(units, schema="../schemas/units.schema.yaml")
+# validate(units, schema="../schemas/units.schema.yaml")
 
 ### Set wildcard constraints
 

@@ -12,8 +12,6 @@ rule sortmerna:
         e=0.000001,
     log:
         "analysis_output/{sample}/sortmerna/{sample}_{type}.log",
-    benchmark:
-        "analysis_output/{sample}/sortmerna/{sample}_{type}.tsv",
     container:
         config.get("tools", {}).get("sortmerna", "docker://marrip/sortmerna:4.3.4")
     threads: 2
