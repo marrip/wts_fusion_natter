@@ -20,9 +20,9 @@ rule mosdepth:
       """
       mosdepth \
       -n \
-      -x\
+      -x \
       -t {threads} \
       --by {input.bed} \
       analysis_output/{wildcards.sample}/mosdepth/{wildcards.sample}_{wildcards.type} \
-      {input.bam} &> {log}"
+      {input.bam} &> {log}
       """
