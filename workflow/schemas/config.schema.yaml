@@ -1,0 +1,49 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+description: snakemake configuration file
+type: object
+properties:
+  samples:
+    type: string
+  units:
+    type: string
+  mosdepth:
+    type: object
+    properties:
+      bed:
+        type: string
+    required:
+      - bed
+  sortmerna:
+    type: object
+    properties:
+      fasta:
+        type: array
+      index:
+        type: string
+    required:
+      - fasta
+      - index
+  star:
+    type: object
+    properties:
+      genome_dir:
+        type: string
+    required:
+      - genome_dir
+  tools:
+    type: object
+    properties:
+      common:
+        type: string
+      mosdepth:
+        type: string
+      sortmerna:
+        type: string
+      star:
+        type: string
+  required:
+    - samples
+    - units
+    - mosdepth
+    - sortmerna
+    - star
