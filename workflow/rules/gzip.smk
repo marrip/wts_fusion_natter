@@ -11,5 +11,5 @@ rule gunzip:
         "{rule}: Gunzip {wildcards.file}.gz"
     shell:
         """
-        gunzip {input} &> {log}
+        gunzip -k {input} &> {log}
         """
