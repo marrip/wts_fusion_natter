@@ -50,6 +50,13 @@ def get_sortmerna_ref_fmt(wildcards):
 def compile_output_list(wildcards):
     output_list = []
     files = {
+        "mosdepth": [
+            "mosdepth.global.dist.txt",
+            "mosdepth.region.dist.txt",
+            "mosdepth.summary.txt",
+            "regions.bed.gz",
+            "regions.bed.gz.csi",
+        ],
         "sortmerna": [
             "rrna.fq.gz",
             "fq.gz",

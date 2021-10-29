@@ -1,8 +1,12 @@
 include: "rules/common.smk"
-include: "rules/sortmerna.smk"
 include: "rules/combine_fq.smk"
+include: "rules/gzip.smk"
+include: "rules/mosdepth.smk"
+include: "rules/samtools.smk"
+include: "rules/sortmerna.smk"
+include: "rules/star.smk"
 
 
 rule all:
-    input:
-        compile_output_list,
+  input:
+      compile_output_list,
