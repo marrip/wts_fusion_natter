@@ -1,11 +1,19 @@
 samples: "samples.tsv"
 units: "units.tsv"
 
+mosdepth:
+  bed: "reference/SSU72.bed"
+
 sortmerna:
   fasta:
     - "reference/23s.fasta"
   index: "reference/idx"
 
+star:
+  genome_dir: "reference/GenomeDir"
+
 tools:
   common: "docker://marrip/common:1.1.1"
+  mosdepth: "docker://marrip/mosdepth:0.3.2"
   sortmerna: "docker://marrip/sortmerna:4.3.4"
+  star: "docker://marrip/star:2.7.9a"

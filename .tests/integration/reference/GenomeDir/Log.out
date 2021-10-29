@@ -1,0 +1,84 @@
+STAR version=2.7.9a
+STAR compilation time,server,dir=2021-10-28T14:44:24+00:00 :/STAR/source
+##### Command Line:
+STAR --runMode genomeGenerate --genomeFastaFiles SSU72.fasta --sjdbGTFtagExonParentTranscript Parent --sjdbGTFfile SSU72.gff --genomeSAindexNbases 6
+##### Initial USER parameters from Command Line:
+###### All USER parameters from Command Line:
+runMode                       genomeGenerate        ~RE-DEFINED
+genomeFastaFiles              SSU72.fasta        ~RE-DEFINED
+sjdbGTFtagExonParentTranscriptParent     ~RE-DEFINED
+sjdbGTFfile                   SSU72.gff     ~RE-DEFINED
+genomeSAindexNbases           6     ~RE-DEFINED
+##### Finished reading parameters from all sources
+
+##### Final user re-defined parameters-----------------:
+runMode                           genomeGenerate   
+genomeFastaFiles                  SSU72.fasta   
+genomeSAindexNbases               6
+sjdbGTFfile                       SSU72.gff
+sjdbGTFtagExonParentTranscript    Parent
+
+-------------------------------
+##### Final effective command line:
+STAR   --runMode genomeGenerate      --genomeFastaFiles SSU72.fasta      --genomeSAindexNbases 6   --sjdbGTFfile SSU72.gff   --sjdbGTFtagExonParentTranscript Parent
+----------------------------------------
+
+Number of fastq files for each mate = 1
+ParametersSolo: --soloCellFilterType CellRanger2.2 filtering parameters:  3000 0.99 10
+Finished loading and checking parameters
+--genomeDir directory created: ./GenomeDir/
+Oct 29 07:44:01 ... starting to generate Genome files
+SSU72.fasta : chr # 0  "chr1" chrStart: 0
+Chromosome sequence lengths: 
+chr1	33191
+Genome sequence total length = 33191
+Genome size with padding = 262144
+Oct 29 07:44:01 ..... processing annotations GTF
+WARNING: while processing pGe.sjdbGTFfile=SSU72.gff: no gene_id for line:
+chr1	BestRefSeq	exon	32806	33191	.	-	.	ID=id1809;Parent=rna217;Dbxref=GeneID:29101,Genbank:NM_014188.2,HGNC:25016,HPRD:13712;gbkey=mRNA;gene=SSU72;product=SSU72 RNA polymerase II CTD phosphatase homolog (S. cerevisiae);transcript_id=NM_014188.2
+WARNING: while processing pGe.sjdbGTFfile=SSU72.gff: no gene_id for line:
+chr1	BestRefSeq	exon	23101	23244	.	-	.	ID=id1810;Parent=rna217;Dbxref=GeneID:29101,Genbank:NM_014188.2,HGNC:25016,HPRD:13712;gbkey=mRNA;gene=SSU72;product=SSU72 RNA polymerase II CTD phosphatase homolog (S. cerevisiae);transcript_id=NM_014188.2
+WARNING: while processing pGe.sjdbGTFfile=SSU72.gff: no gene_id for line:
+chr1	BestRefSeq	exon	3191	3330	.	-	.	ID=id1811;Parent=rna217;Dbxref=GeneID:29101,Genbank:NM_014188.2,HGNC:25016,HPRD:13712;gbkey=mRNA;gene=SSU72;product=SSU72 RNA polymerase II CTD phosphatase homolog (S. cerevisiae);transcript_id=NM_014188.2
+WARNING: while processing pGe.sjdbGTFfile=SSU72.gff: no gene_id for line:
+chr1	BestRefSeq	exon	2197	2315	.	-	.	ID=id1812;Parent=rna217;Dbxref=GeneID:29101,Genbank:NM_014188.2,HGNC:25016,HPRD:13712;gbkey=mRNA;gene=SSU72;product=SSU72 RNA polymerase II CTD phosphatase homolog (S. cerevisiae);transcript_id=NM_014188.2
+WARNING: while processing pGe.sjdbGTFfile=SSU72.gff: no gene_id for line:
+chr1	BestRefSeq	exon	1	495	.	-	.	ID=id1813;Parent=rna217;Dbxref=GeneID:29101,Genbank:NM_014188.2,HGNC:25016,HPRD:13712;gbkey=mRNA;gene=SSU72;product=SSU72 RNA polymerase II CTD phosphatase homolog (S. cerevisiae);transcript_id=NM_014188.2
+Processing pGe.sjdbGTFfile=SSU72.gff, found:
+		1 transcripts
+		5 exons (non-collapsed)
+		4 collapsed junctions
+Total junctions: 4
+Oct 29 07:44:01 ..... finished GTF processing
+
+Estimated genome size with padding and SJs: total=genome+SJ=201262144 = 262144 + 201000000
+GstrandBit=32
+Number of SA indices: 66382
+Oct 29 07:44:01 ... starting to sort Suffix Array. This may take a long time...
+Number of chunks: 1;   chunks size limit: 18599685304 bytes
+Oct 29 07:44:01 ... sorting Suffix Array chunks and saving them to disk...
+Writing 531056 bytes into ./GenomeDir//SA_0 ; empty space on disk = 175819530960896 bytes ... done
+Oct 29 07:44:01 ... loading chunks from disk, packing SA...
+Oct 29 07:44:01 ... finished generating suffix array
+Oct 29 07:44:01 ... generating Suffix Array index
+Oct 29 07:44:01 ... completed Suffix Array index
+Oct 29 07:44:01   Finished preparing junctions
+Oct 29 07:44:01 ..... inserting junctions into the genome indices
+Oct 29 07:44:01   Finished SA search: number of new junctions=4, old junctions=0
+Oct 29 07:44:01   Finished sorting SA indicesL nInd=1600
+Genome size with junctions=262948  262144   804
+GstrandBit1=32   GstrandBit=32
+Oct 29 07:44:01   Finished inserting junction indices
+Oct 29 07:44:01   Finished SAi
+Oct 29 07:44:01 ..... finished inserting junctions into genome
+Oct 29 07:44:01 ... writing Genome to disk ...
+Writing 262948 bytes into ./GenomeDir//Genome ; empty space on disk = 175819527815168 bytes ... done
+SA size in bytes: 280429
+Oct 29 07:44:01 ... writing Suffix Array to disk ...
+Writing 280429 bytes into ./GenomeDir//SA ; empty space on disk = 175819459657728 bytes ... done
+Oct 29 07:44:01 ... writing SAindex to disk
+Writing 8 bytes into ./GenomeDir//SAindex ; empty space on disk = 175819387305984 bytes ... done
+Writing 56 bytes into ./GenomeDir//SAindex ; empty space on disk = 175819387305984 bytes ... done
+Writing 23891 bytes into ./GenomeDir//SAindex ; empty space on disk = 175819387305984 bytes ... done
+Oct 29 07:44:01 ..... finished successfully
+DONE: Genome generation, EXITING
