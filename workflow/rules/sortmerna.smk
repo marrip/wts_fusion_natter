@@ -14,7 +14,7 @@ rule sortmerna:
         "analysis_output/{sample}/sortmerna/{sample}_{type}.log",
     container:
         config.get("tools", {}).get("sortmerna", "docker://marrip/sortmerna:4.3.4")
-    threads: 2
+    threads: 8
     message:
         "{rule}: Identify rRNA reads in sample {wildcards.sample}_{wildcards.type}"
     shell:

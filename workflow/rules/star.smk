@@ -9,7 +9,7 @@ rule star:
         "analysis_output/{sample}/star/{sample}_{type}.log",
     container:
         config.get("tools", {}).get("star", "docker://marrip/star:2.7.9a")
-    threads: 2
+    threads: 8
     message:
         "{rule}: Map reads for {wildcards.sample}_{wildcards.type}"
     shell:
