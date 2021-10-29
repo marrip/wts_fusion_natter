@@ -8,5 +8,5 @@ include: "rules/star.smk"
 
 
 rule all:
-  input:
-      compile_output_list,
+    input:
+        compile_output_list,

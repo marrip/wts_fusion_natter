@@ -6,7 +6,7 @@ rule star:
     output:
         "analysis_output/{sample}/star/{sample}_{type}.Aligned.sortedByCoord.out.bam",
     log:
-        "analysis_output/{sample}/star/{sample}_{type}.log"
+        "analysis_output/{sample}/star/{sample}_{type}.log",
     container:
         config.get("tools", {}).get("star", "docker://marrip/star:2.7.9a")
     threads: 2

@@ -4,7 +4,7 @@ rule gunzip:
     output:
         "{file}",
     log:
-        "{file}.log"
+        "{file}.log",
     container:
         config.get("tools", {}).get("common", "docker://marrip/common:1.1.1")
     message:
