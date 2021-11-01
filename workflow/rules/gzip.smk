@@ -1,14 +1,14 @@
 rule gunzip:
     input:
-        "{file}.gz",
+        "{file}.fq.gz",
     output:
-        "{file}",
+        "{file}.fq",
     log:
         "{file}.log",
     container:
         config.get("tools", {}).get("common", "docker://marrip/common:1.1.1")
     message:
-        "{rule}: Gunzip {wildcards.file}.gz"
+        "{rule}: Gunzip {wildcards.file}.fq.gz"
     shell:
         """
         gunzip -k {input} &> {log}
